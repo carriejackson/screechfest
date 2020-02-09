@@ -1,0 +1,211 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 0;
+  flex: none;
+}
+
+head,
+script,
+style {
+  display: none;
+}
+
+html {
+  background: #000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  color: rgba(255, 255, 255, 0.62);
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.15;
+  animation: sway infinite 6s;
+  z-index: -1;
+}
+
+main > * + * {
+  margin-top: 2vmax;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+nav {
+  display: flex;
+}
+
+nav > * + * {
+  margin-left: 1rem;
+}
+
+p {
+  font-size: calc(16px + 1vw);
+  text-align: center;
+  line-height: 162%;
+  max-width: 70ch;
+  padding: 3vmin 0;
+}
+
+footer {
+  padding-top: 38%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  background: linear-gradient(transparent, black 30%);
+  z-index: 1;
+}
+
+img[src='lights.png'] {
+  animation: flicker infinite 5s;
+}
+
+img[src='logo.png'] {
+  animation: pulse infinite 10s;
+  width: 80vw;
+  max-width: 900px;
+  margin-top: 2vmax;
+}
+
+img[src='clown.png'] {
+  width: 80%;
+  animation: fade infinite 10s;
+  transform: translate(0, 30%);
+}
+
+a {
+  font-size: calc(16px + 1vw);
+  text-transform: uppercase;
+  color: #990000;
+  font-weight: bold;
+}
+
+a:first-child,
+a:last-child {
+  color: #fff;
+  text-decoration: none;
+}
+
+small {
+  width: 280px;
+  padding: 0.62rem;
+  border: 1px solid currentColor;
+  opacity: 0.5;
+  max-width: 75ch;
+  font-family: sans-serif;
+}
+
+section {
+  padding: 10% 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 10vmin;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0;
+  }
+  97% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  62% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sway {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  38% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
