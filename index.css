@@ -209,3 +209,6 @@ h2 {
     transform: scale(1);
   }
 }
+.ticket {
+  width: 300px;
+}
