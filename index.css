@@ -212,3 +212,4 @@ h2 {
 .ticket {
   width: 300px;
 }
+.row { display: flex; }
