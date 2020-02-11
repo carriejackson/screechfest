@@ -214,3 +214,20 @@ h2 {
   flex: none
 }
 .row { display: flex; }
+
+.warning-text {
+  width: 280px;
+  padding: 0.62rem;
+  border: 1px solid currentColor;
+  opacity: 0.5;
+  max-width: 75ch;
+  font-family: sans-serif;
+}
+
+.ticket-text {
+  width: 280px;
+  padding: 0.62rem;
+  opacity: 0.5;
+  max-width: 75ch;
+  font-family: sans-serif;
+}
